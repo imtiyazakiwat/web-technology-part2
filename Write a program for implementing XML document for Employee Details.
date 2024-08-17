@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>XML Employee Details</title>
+</head>
+<body>
+    <h1>Employee Details</h1>
+
+    <div id="employeeList"></div>
+
+    <script>
+        // Load XML data
+        fetch('employees.xml')
+            .then(response => response.text())
+            .then(data => {
+                // Parse XML string into XML Document
+                let parser = new DOMParser();
+                let xmlDoc = parser.parseFromString(data, 'text/xml');
+
+                // Get all <employee> elements
+                let employees = xmlDoc.getElementsByTagName('employee');
+
+                // Display each employee's details
+                let employeeListDiv = document.getElementById('employeeList');
+                for (let i = 0; i < employees.length; i++) {
+                    let employee = employees[i];
+                    let id = employee.getElementsByTagName('id')[0].textContent;
+                    let name = employee.getElementsByTagName('name')[0].textContent;
+                    let department = employee.getElementsByTagName('department')[0].textContent;
+                    let position = employee.getElementsByTagName('position')[0].textContent;
+                    let salary = employee.getElementsByTagName('salary')[0].textContent;
+
+                    // Display employee details
+                    let employeeDetails = `
+                        <div>
+                            <h2>Employee ID: ${id}</h2>
+                            <p><strong>Name:</strong> ${name}</p>
+                            <p><strong>Department:</strong> ${department}</p>
+                            <p><strong>Position:</strong> ${position}</p>
+                            <p><strong>Salary:</strong> ${salary}</p>
+                        </div>
+                    `;
+                    employeeListDiv.innerHTML += employeeDetails;
+                }
+            })
+            .catch(error => console.error('Error fetching XML:', error));
+    </script>
+</body>
+</html>
