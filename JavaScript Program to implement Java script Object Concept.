@@ -1,0 +1,25 @@
+<html>
+<body>
+<script>
+// JavaScript code to implement the object concept
+document.addEventListener("DOMContentLoaded", function () {
+// Define an object
+var person = {
+firstName: "Hare",
+lastName: "Krishna",
+age: 111,
+greet: function () {
+return "Hello, I'm " + this.firstName + " " + this.lastName + ".";
+}
+};
+// Display object properties in the HTML document
+var outputElement = document.getElementById("output");
+outputElement.innerHTML = "<p>First Name: " + person.firstName + "</p>" +
+"<p>Last Name: " + person.lastName + "</p>" +
+"<p>Age: " + person.age + "</p>" +
+"<p>Greeting: " + person.greet() + "</p>";
+});
+</script>
+<div id="output"></div>
+</body>
+</html>
