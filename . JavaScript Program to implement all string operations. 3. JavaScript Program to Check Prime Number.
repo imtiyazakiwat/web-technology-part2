@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String Operations</title>
+    <style>
+      
+      Body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input, button, select {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>String Operations</h1>
+    
+    <label for="str1">Enter first string:</label>
+    <input type="text" id="str1" placeholder="Enter first string">
+    
+    <br>
+    
+    <label for="str2">Enter second string:</label>
+    <input type="text" id="str2" placeholder="Enter second string">
+    
+    <br>
+    
+    <label for="operation">Select operation:</label>
+    <select id="operation">
+        <option value="concat">Concatenate</option>
+        <option value="length">Length of String 1</option>
+        <option value="substring">Substring (from 1st to 3rd char)</option>
+        <option value="replace">Replace 'a' with 'o' in String 1</option>
+        <option value="uppercase">Uppercase String 1</option>
+        <option value="lowercase">Lowercase String 1</option>
+        <option value="split">Split String 1 by spaces</option>
+        <option value="charAt">Character at position 2 of String 1</option>
+        <option value="indexOf">Index of 'a' in String 1</option>
+        <option value="trim">Trim spaces from String 1</option>
+ 
+   </select>
+    
+     <br>
+    
+    <button onclick="performStringOperation()">Perform Operation</button>
+    
+    <h2 id="result">Result: </h2>
+    
+    <script>
+        function performStringOperation() {
+          
+
+
+
+  // Get values from input fields
+            let str1 = document.getElementById('str1').value;
+            let str2 = document.getElementById('str2').value;
+            let operation = document.getElementById('operation').value;
+            
+         
+
+   // Perform the selected operation
+            let result;
+            switch (operation) {
+                case 'concat':
+                    result = str1 + str2;
+                    break;
+                case 'length':
+                    result = str1.length;
+                    break;
+                case 'substring':
+                    result = str1.substring(0, 3);
+                    break;
+                case 'replace':
+                    result = str1.replace(/a/g, 'o');
+                    break;
+                case 'uppercase':
+                    result = str1.toUpperCase();
+                    break;
+                case 'lowercase':
+                    result = str1.toLowerCase();
+                    break;
+                case 'split':
+                    result = str1.split(' ');
+                    break;
+                case 'charAt':
+                    result = str1.charAt(1);
+                    break;
+                case 'indexOf':
+                    result = str1.indexOf('a');
+                    break;
+                case 'trim':
+                    result = str1.trim();
+                    break;
+                default:
+                    result = 'Invalid operation';
+            }
+            
+            // Display the result
+            document.getElementById('result').innerText = 'Result: ' + result;
+        }
+    </script>
+</body>
+</html>
+
