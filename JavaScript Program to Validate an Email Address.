@@ -1,0 +1,22 @@
+<html>
+<body>
+<script>
+function validateEmail() {
+var emailInput = document.getElementById("email");
+var resultElement = document.getElementById("validationResult");
+if (emailInput.checkValidity()) {
+resultElement.textContent = "Email is valid!";
+resultElement.style.color = "green";
+} 
+else
+{
+resultElement.textContent = "Invalid email address";
+resultElement.style.color = "red";
+}
+}
+</script>
+Enter your email: <input type="email" id="email" placeholder="Enter your email" 
+oninput="validateEmail()" required>
+<div id="validationResult"></div>
+</body>
+</html
