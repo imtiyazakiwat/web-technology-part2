@@ -1,0 +1,13 @@
+<html >
+<body>
+<script>
+var myArray = [];
+myArray.push("apple");
+myArray.push("grapes");
+myArray.push("cherry");
+myArray.push("guava");
+myArray.push("mango");
+document.write("<p>Array Contents: " + myArray.join(', ') + "</p>");
+</script>
+</body>
+</html>
