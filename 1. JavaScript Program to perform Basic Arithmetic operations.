@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>Arithmetic operators in Javascript</title></head> <body>
+<script type="text/javascript">
+var a=parseInt(prompt("enter first number"));
+var b=parseInt(prompt("enter second number"));
+var sum;
+var difference;
+var product;
+var quotient; 
+sum=a+b;
+difference=a-b;
+product=a*b;
+quotient=a/b;
+document.write("Sum= ");
+document.write(sum);
+document.write("<br>");
+document.write("Difference =");
+document.write(difference);
+document.write("<br>");
+document.write("Product=");
+document.write(product);
+document.write("<br>");
+document.write("Quotient=");
+document.write(quotient);
+</script>
+</body>
+</html>
