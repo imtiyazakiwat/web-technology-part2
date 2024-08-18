@@ -1,0 +1,57 @@
+[18/08, 9:10 am] Meta AI: Here is an example of inline CSS to format an ID card:
+
+```
+<div id="id-card" style="width: 300px; height: 200px; border: 1px solid #ccc; padding: 20px; font-family: Arial, sans-serif;">
+  <img src="image-url" alt="ID Card Image" style="width: 100px; height: 120px; float: left; margin-right: 20px;">
+  <h2 style="font-size: 18px; margin-bottom: 10px;">Name</h2>
+  <p style="font-size: 14px; margin-bottom: 10px;">ID Number: xxxxxxx</p>
+  <p style="font-size: 14px; margin-bottom: 10px;">Department: xxxxxxx</p>
+  <p style="font-size: 14px; margin-bottom: 10px;">Expires: xxxxxxx</p>
+</div>
+```
+
+In this example, the CSS styles are applied directly to the HTML elements using the `style` attribute. This is known as inline CSS.
+[18/08, 9:17 am] Meta AI: Here is a short HTML and JavaScript program to perform basic arithmetic operations:
+
+HTML:
+```
+<input id="num1" type="number">
+<select id="operator">
+  <option value="+">+</option>
+  <option value="-">-</option>
+  <option value="*">*</option>
+  <option value="/">/</option>
+</select>
+<input id="num2" type="number">
+<button onclick="calculate()">Calculate</button>
+<p id="result"></p>
+```
+
+JavaScript:
+```
+function calculate() {
+  var num1 = parseFloat(document.getElementById('num1').value);
+  var operator = document.getElementById('operator').value;
+  var num2 = parseFloat(document.getElementById('num2').value);
+  var result;
+  
+  switch (operator) {
+    case '+':
+      result = num1 + num2;
+      break;
+    case '-':
+      result = num1 - num2;
+      break;
+    case '*':
+      result = num1 * num2;
+      break;
+    case '/':
+      result = num1 / num2;
+      break;
+  }
+  
+  document.getElementById('result').innerHTML = 'Result: ' + result;
+}
+```
+
+This program allows users to input two numbers, select an arithmetic operation, and click the "Calculate" button to display the result.
